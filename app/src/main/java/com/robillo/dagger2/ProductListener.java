@@ -9,7 +9,7 @@ import javax.inject.Inject;
  * Created by robinkamboj on 14/09/17.
  */
 
-public class ProductPresenter {
+public class ProductListener {
 
     //We are creating a class member variable for the
     //Shopping cart that we will be injecting to this class
@@ -17,7 +17,7 @@ public class ProductPresenter {
     @Inject
     ShoppingCart mCart;
 
-    public ProductPresenter(){
+    public ProductListener(){
         //Here is where the actual injection takes place
         Dagger2Application.getInstance().getAppComponent().inject(this);
     }

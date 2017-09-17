@@ -1,7 +1,8 @@
 package com.robillo.dagger2.dagger;
 
 import com.robillo.dagger2.MainActivity;
-import com.robillo.dagger2.ProductPresenter;
+import com.robillo.dagger2.ProductListPresenter;
+import com.robillo.dagger2.ProductListener;
 
 import javax.inject.Singleton;
 
@@ -19,6 +20,7 @@ import dagger.Component;
         }
 )
 public interface AppComponent {
-    void inject(ProductPresenter presenter);
+    void inject(ProductListener presenter);
     void inject(MainActivity activity);
+    void inject(ProductListPresenter presenter);
 }
